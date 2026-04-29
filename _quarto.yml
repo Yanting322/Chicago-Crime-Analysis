@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - Data_cleaning.ipynb
+    - EDA.ipynb
+    - Modeling.ipynb
+
+website:
+  title: "Chicago Crime Arrest Prediction"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: Data_cleaning.ipynb
+        text: Data Cleaning
+      - href: EDA.ipynb
+        text: EDA
+      - href: Modeling.ipynb
+        text: Modeling
+  page-footer:
+    left: "Capstone project site built with Quarto"
+    right: "Data source: City of Chicago Crimes - 2001 to Present"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-tools: true
+    embed-resources: false
+    smooth-scroll: true
+
+execute:
+  enabled: false
